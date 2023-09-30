@@ -1,0 +1,17 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(49, 54, 54, 0.397);
+    font-family: $fuentePrincipal;
+    color: white;
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        padding: 1rem;
+        li{
+            list-style: none;
+        }
+    }
+}

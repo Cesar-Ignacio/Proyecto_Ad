@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Croissant+One&family=Josefin+Sans:ital,wght@0,300;0,400;1,400&family=Kanit:ital,wght@0,300;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(49, 54, 54, 0.397);
+  font-family: "Kanit", sans-serif;
+  color: white; }
+  .header ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem; }
+    .header ul li {
+      list-style: none; }
+
+.aside {
+  border: solid black 1px;
+  min-height: 100vh;
+  padding: 1rem;
+  position: fixed;
+  top: 0; }
+
+.main {
+  border: solid red 1px; }
+
+.primeraSeccion {
+  background-color: bisque;
+  padding: 6rem 0 0 6rem;
+  min-height: 100vh; }
