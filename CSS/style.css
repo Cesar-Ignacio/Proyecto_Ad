@@ -4,10 +4,19 @@
   padding: 0;
   box-sizing: border-box; }
 
+.btn {
+  color: white;
+  background-color: #b1762f;
+  text-decoration: none;
+  padding: 0.2em 1em 0.4em 1em;
+  border-radius: 2rem;
+  font-size: 1.2rem; }
+
 html {
   scroll-behavior: smooth; }
 
 .header {
+  z-index: 1;
   position: fixed;
   top: 0;
   width: 100%;
@@ -24,6 +33,7 @@ html {
       list-style: none; }
 
 .aside {
+  z-index: 1;
   background-color: rgba(79, 83, 83, 0.397);
   backdrop-filter: blur(2px);
   min-height: 100vh;
@@ -65,7 +75,7 @@ html {
     width: 2rem; }
     .primeraSeccion a svg {
       fill: black;
-      animation: flecha 1s infinite linear; }
+      animation: flecha 1s 4s infinite linear; }
 
 @keyframes imagenes {
   0% {
@@ -83,3 +93,29 @@ html {
     filter: drop-shadow(0px 0px 0px #faf8f8); }
   50% {
     filter: drop-shadow(0px 0px 20px #faf8f8) drop-shadow(0px 0px 30px #d7fd00) drop-shadow(0px 0px 40px #fbff00); } }
+
+.segundaSeccion {
+  font-family: "Kanit", sans-serif;
+  background-image: url(/assets/img/fonfoRoket.jpg);
+  background-size: cover;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  overflow: hidden; }
+
+.imgPersonaje {
+  width: 50%;
+  filter: drop-shadow(2px 2px 10px #ff7b00) drop-shadow(-10px -50px 0px rgba(255, 0, 157, 0.347)) drop-shadow(180px -50px 50px rgba(111, 0, 255, 0.241)); }
+  .imgPersonaje img {
+    width: 100%; }
+
+.infoPersonaje {
+  width: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem; }
+  .infoPersonaje strong {
+    font-size: 5.5rem; }
