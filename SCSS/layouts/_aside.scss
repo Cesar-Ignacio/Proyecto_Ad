@@ -1,7 +1,29 @@
-.aside{
-    border: solid black 1px;
+.aside {
+    // border: solid black 1px;
+    background-color: rgba(79, 83, 83, 0.397);
+    backdrop-filter: blur(2px);
     min-height: 100vh;
-    padding: 1rem;
+    padding: 0.2rem 1rem;
     position: fixed;
     top: 0;
+
+    svg {
+        fill: rgb(255, 255, 255)
+    }
+
+    .asideLogo {
+        // border: solid rgb(20, 19, 19) 2px;
+        width: 2.5rem;
+
+    }
+
+    ul {
+        list-style: none;
+
+        li {
+            width: 1.8rem;
+            margin-top: 2rem;
+
+        }
+    }
 }

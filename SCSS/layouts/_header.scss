@@ -2,7 +2,8 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(49, 54, 54, 0.397);
+    background-color: rgba(79, 83, 83, 0.397);
+    backdrop-filter: blur(2px);
     font-family: $fuentePrincipal;
     color: white;
     ul {

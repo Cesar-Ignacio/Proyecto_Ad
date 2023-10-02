@@ -1,11 +1,19 @@
 
 .main{
     // padding: 8rem;
-    border: solid red 1px;
+    border: solid red 0px;
 }
 
 .primeraSeccion{
-    background-color: bisque;
-    padding:6rem 0 0 6rem;
+    font-family: $fuentePrincipal;
+    background: RED;    
+    padding:0rem 0 0 6rem;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1{
+        font-size: 20rem;
+        color: antiquewhite;
+    }
 }

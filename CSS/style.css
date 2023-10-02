@@ -8,7 +8,8 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(49, 54, 54, 0.397);
+  background-color: rgba(79, 83, 83, 0.397);
+  backdrop-filter: blur(2px);
   font-family: "Kanit", sans-serif;
   color: white; }
   .header ul {
@@ -20,16 +21,33 @@
       list-style: none; }
 
 .aside {
-  border: solid black 1px;
+  background-color: rgba(79, 83, 83, 0.397);
+  backdrop-filter: blur(2px);
   min-height: 100vh;
-  padding: 1rem;
+  padding: 0.2rem 1rem;
   position: fixed;
   top: 0; }
+  .aside svg {
+    fill: white; }
+  .aside .asideLogo {
+    width: 2.5rem; }
+  .aside ul {
+    list-style: none; }
+    .aside ul li {
+      width: 1.8rem;
+      margin-top: 2rem; }
 
 .main {
-  border: solid red 1px; }
+  border: solid red 0px; }
 
 .primeraSeccion {
-  background-color: bisque;
-  padding: 6rem 0 0 6rem;
-  min-height: 100vh; }
+  font-family: "Kanit", sans-serif;
+  background: RED;
+  padding: 0rem 0 0 6rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .primeraSeccion h1 {
+    font-size: 20rem;
+    color: antiquewhite; }
