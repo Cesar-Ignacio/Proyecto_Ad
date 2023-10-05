@@ -8,17 +8,18 @@ html{
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(79, 83, 83, 0.397);
+    background-color:$colorHeaderAside;
     backdrop-filter: blur(2px);
-    font-family: $fuentePrincipal;
-    color: white;
+    padding: 0.5em;
     ul {
         display: flex;
-        justify-content: center;
-        gap: 2rem;
-        padding: 1rem;
+        justify-content: space-evenly;
         li{
             list-style: none;
+            svg{
+                width: 2rem;
+                fill: white;
+            }
         }
     }
 }

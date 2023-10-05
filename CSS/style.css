@@ -20,21 +20,22 @@ html {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(79, 83, 83, 0.397);
+  background-color: rgba(0, 0, 0, 0.57);
   backdrop-filter: blur(2px);
-  font-family: "Kanit", sans-serif;
-  color: white; }
+  padding: 0.5em; }
   .header ul {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 1rem; }
+    justify-content: space-evenly; }
     .header ul li {
       list-style: none; }
+      .header ul li svg {
+        width: 2rem;
+        fill: white; }
 
 .aside {
+  font-family: "Kanit", sans-serif;
   z-index: 1;
-  background-color: rgba(79, 83, 83, 0.397);
+  background-color: rgba(0, 0, 0, 0.57);
   backdrop-filter: blur(2px);
   min-height: 100vh;
   padding: 0.2rem 1rem;
@@ -48,29 +49,48 @@ html {
     list-style: none; }
     .aside ul li {
       width: 1.8rem;
-      margin-top: 2rem; }
+      margin-top: 2rem;
+      position: relative; }
+      .aside ul li .textoPersonaje {
+        width: 6rem;
+        opacity: 0;
+        top: 1rem;
+        left: 2rem;
+        position: absolute;
+        background-color: rgba(251, 0, 138, 0.876);
+        color: white;
+        padding: 0.1em 0em 0.3em 1.2em;
+        transition: all linear 0.5s;
+        clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%); }
+      .aside ul li:hover .textoPersonaje {
+        opacity: 1; }
 
 .main {
   border: solid red 0px; }
 
-.primeraSeccion {
+.seccion {
   font-family: "Kanit", sans-serif;
+  height: 100vh;
+  padding: 0rem 0 0 4rem;
+  overflow: hidden; }
+
+.primeraSeccion {
   background: #f6031c;
   background: radial-gradient(circle, #f6031c 0%, #a22607 100%);
-  padding: 0rem 0 0 4rem;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
   .primeraSeccion h1 {
     font-size: 21rem;
-    background-image: url(/assets/img/adv5.webp);
+    background-image: url(/assets/img/adv1.jpeg);
     background-size: cover;
     background-clip: text;
+    background-position-y: 100px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: imagenes 0.6s 5 ease-out; }
+    filter: drop-shadow(7px 0px 3px white) drop-shadow(7px 0px 20px rgba(248, 248, 248, 0.392));
+    animation: imagenes 2s 1 cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   .primeraSeccion a {
     width: 2rem; }
     .primeraSeccion a svg {
@@ -80,13 +100,21 @@ html {
 @keyframes imagenes {
   0% {
     /* background-position-y:0%; */
-    background-image: url(/assets/img/adv3.webp); }
+    background-image: url(/assets/img/adv4.webp);
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(300px);
+    transform: translateZ(300px);
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0; }
   50% {
-    background-image: url(/assets/img/adv2.webp); }
-  90% {
-    background-image: url(/assets/img/adv4.webp); }
+    background-image: url(/assets/img/adv3.webp); }
   100% {
-    background-image: url(/assets/img/adv5.webp); } }
+    -webkit-transform: translateZ(12px);
+    transform: translateZ(12px);
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1; } }
 
 @keyframes flecha {
   0% {
@@ -95,27 +123,36 @@ html {
     filter: drop-shadow(0px 0px 20px #faf8f8) drop-shadow(0px 0px 30px #d7fd00) drop-shadow(0px 0px 40px #fbff00); } }
 
 .segundaSeccion {
-  font-family: "Kanit", sans-serif;
-  background-image: url(/assets/img/fonfoRoket.jpg);
+  background-image: url(/assets/img/fonfoRo2.jpg);
   background-size: cover;
-  padding: 0;
-  height: 100vh;
   display: flex;
-  overflow: hidden; }
+  padding: 0; }
 
 .imgPersonaje {
   width: 50%;
-  filter: drop-shadow(2px 2px 10px #ff7b00) drop-shadow(-10px -50px 0px rgba(255, 0, 157, 0.347)) drop-shadow(180px -50px 50px rgba(111, 0, 255, 0.241)); }
+  filter: drop-shadow(0px 0px 120px rgba(0, 255, 247, 0.662)); }
   .imgPersonaje img {
     width: 100%; }
 
 .infoPersonaje {
   width: 50%;
+  padding-top: 1rem;
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  gap: 1rem; }
+  justify-content: space-evenly; }
   .infoPersonaje strong {
-    font-size: 5.5rem; }
+    font-size: 3rem;
+    border-image: radial-gradient(#f700ad, transparent) 1;
+    border-bottom: solid 5px;
+    letter-spacing: 0.1em;
+    animation: nombrePersonaje 3s infinite linear; }
+  .infoPersonaje iframe {
+    width: 100%;
+    height: 15rem;
+    border-radius: 1rem;
+    filter: drop-shadow(0px 20px 10px rgba(0, 255, 247, 0.463)); }
+
+@keyframes nombrePersonaje {
+  50% {
+    text-shadow: 0px 0px 5px white; } }

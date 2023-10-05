@@ -1,7 +1,8 @@
 .aside {
     // border: solid black 1px;
+    font-family: $fuentePrincipal;
     z-index: 1;
-    background-color: rgba(79, 83, 83, 0.397);
+    background-color:$colorHeaderAside;
     backdrop-filter: blur(2px);
     min-height: 100vh;
     padding: 0.2rem 1rem;
@@ -20,11 +21,27 @@
 
     ul {
         list-style: none;
-
         li {
             width: 1.8rem;
             margin-top: 2rem;
-
+            position: relative;
+            //border: saddlebrown solid 1px;
+            .textoPersonaje{
+                width: 6rem;
+                opacity: 0;
+                top: 1rem;
+                left: 2rem;
+                position:absolute;
+                background-color: rgba(251, 0, 138, 0.876);
+                color: white;
+                padding: 0.1em 0em 0.3em 1.2em;
+                transition: all linear 0.5s;
+                clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+            }
+            &:hover .textoPersonaje{
+                
+                opacity: 1;
+            }
         }
     }
 }
