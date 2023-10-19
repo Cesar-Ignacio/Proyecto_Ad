@@ -12,11 +12,41 @@
   border-radius: 2rem;
   font-size: 1.2rem; }
 
+@keyframes imagenes {
+  0% {
+    /* background-position-y:0%; */
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(300px);
+    transform: translateZ(300px);
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0; }
+  60% {
+    background-image: url(/assets/img/adv5.webp); }
+  80% {
+    background-image: url(/assets/img/adv3.webp); }
+  100% {
+    -webkit-transform: translateZ(12px);
+    transform: translateZ(12px);
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1; } }
+
+@keyframes flecha {
+  0% {
+    filter: drop-shadow(0px 0px 0px #faf8f8); }
+  50% {
+    filter: drop-shadow(0px 0px 20px #faf8f8) drop-shadow(0px 0px 30px #d7fd00) drop-shadow(0px 0px 40px #fbff00); } }
+
+@keyframes nombrePersonaje {
+  50% {
+    text-shadow: 0px 0px 5px white; } }
+
 html {
   scroll-behavior: smooth; }
 
 .header {
-  z-index: 1;
+  z-index: 3;
   position: fixed;
   top: 0;
   width: 100%;
@@ -34,7 +64,7 @@ html {
 
 .aside {
   font-family: "Kanit", sans-serif;
-  z-index: 1;
+  z-index: 3;
   background-color: rgba(0, 0, 0, 0.57);
   backdrop-filter: blur(2px);
   min-height: 100vh;
@@ -65,9 +95,6 @@ html {
       .aside ul li:hover .textoPersonaje {
         opacity: 1; }
 
-.main {
-  border: solid red 0px; }
-
 .seccion {
   font-family: "Kanit", sans-serif;
   height: 100vh;
@@ -90,57 +117,52 @@ html {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(7px 0px 3px white) drop-shadow(7px 0px 20px rgba(248, 248, 248, 0.392));
-    animation: imagenes 2s 1 cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    animation: imagenes 4s 1 cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   .primeraSeccion a {
     width: 2rem; }
     .primeraSeccion a svg {
       fill: black;
       animation: flecha 1s 4s infinite linear; }
 
-@keyframes imagenes {
-  0% {
-    /* background-position-y:0%; */
-    background-image: url(/assets/img/adv4.webp);
-    letter-spacing: 1em;
-    -webkit-transform: translateZ(300px);
-    transform: translateZ(300px);
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
-    opacity: 0; }
-  50% {
-    background-image: url(/assets/img/adv3.webp); }
-  100% {
-    -webkit-transform: translateZ(12px);
-    transform: translateZ(12px);
-    -webkit-filter: blur(0);
-    filter: blur(0);
-    opacity: 1; } }
-
-@keyframes flecha {
-  0% {
-    filter: drop-shadow(0px 0px 0px #faf8f8); }
-  50% {
-    filter: drop-shadow(0px 0px 20px #faf8f8) drop-shadow(0px 0px 30px #d7fd00) drop-shadow(0px 0px 40px #fbff00); } }
-
-.segundaSeccion {
-  background-image: url(/assets/img/fonfoRo2.jpg);
+.segundaSeccion, .terceraSeccion, .quitaSeccion, .cuartaSeccion {
+  background-image: url(/assets/img/fondo04.jpg);
   background-size: cover;
   display: flex;
-  padding: 0; }
+  padding: 0;
+  position: relative; }
+  .segundaSeccion svg, .terceraSeccion svg, .quitaSeccion svg, .cuartaSeccion svg {
+    height: 100%;
+    right: 30rem;
+    position: absolute;
+    fill: rgba(226, 131, 7, 0.384);
+    z-index: 1; }
+
+.terceraSeccion, .quitaSeccion {
+  background-image: url("/assets/img/fondo06.jpg");
+  padding-left: 5em; }
+
+.cuartaSeccion {
+  background-image: url("/assets/img/fondo08.jpg"); }
+
+.quitaSeccion {
+  background-image: url("/assets/img/fondo09.jpg"); }
 
 .imgPersonaje {
   width: 50%;
-  filter: drop-shadow(0px 0px 120px rgba(0, 255, 247, 0.662)); }
+  filter: drop-shadow(0px 0px 120px rgba(0, 255, 247, 0.662));
+  z-index: 2; }
   .imgPersonaje img {
-    width: 100%; }
+    width: 100%;
+    object-fit: cover; }
 
 .infoPersonaje {
   width: 50%;
-  padding-top: 1rem;
+  padding: 1rem 0.5em 0 0;
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  z-index: 2; }
   .infoPersonaje strong {
     font-size: 3rem;
     border-image: radial-gradient(#f700ad, transparent) 1;
@@ -153,6 +175,5 @@ html {
     border-radius: 1rem;
     filter: drop-shadow(0px 20px 10px rgba(0, 255, 247, 0.463)); }
 
-@keyframes nombrePersonaje {
-  50% {
-    text-shadow: 0px 0px 5px white; } }
+.efectoGroot {
+  filter: drop-shadow(0px 0px 10px rgba(246, 255, 0, 0.662)); }

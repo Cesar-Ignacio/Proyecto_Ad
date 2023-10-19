@@ -1,14 +1,10 @@
-.main {
-    // padding: 8rem;
-    border: solid red 0px;
-}
-
 
 .seccion {
     font-family: $fuentePrincipal;
     height: 100vh;
     padding: 0rem 0 0 4rem;
     overflow: hidden;
+    
 }
 
 .primeraSeccion {
@@ -29,7 +25,7 @@
         -webkit-text-fill-color: transparent;
         filter: drop-shadow(7px 0px 3px white) 
         drop-shadow(7px 0px 20px rgba(248, 248, 248, 0.392));
-        animation: imagenes 2s 1 cubic-bezier(0.250, 0.460, 0.450, 0.940);
+        animation: imagenes 4s 1 cubic-bezier(0.250, 0.460, 0.450, 0.940);
     }
 
     a {
@@ -42,70 +38,58 @@
     }
 }
 
-@keyframes imagenes {
-    0% {
-        /* background-position-y:0%; */
-        background-image: url(/assets/img/adv4.webp);
-        letter-spacing: 1em;
-        -webkit-transform: translateZ(300px);
-        transform: translateZ(300px);
-        -webkit-filter: blur(12px);
-        filter: blur(12px);
-        opacity: 0;
-    }
-
-    50% {
-
-        background-image: url(/assets/img/adv3.webp);
-    }
-
-    100% {
-
-        // background-image: url(/assets/img/adv5.webp);
-        -webkit-transform: translateZ(12px);
-        transform: translateZ(12px);
-        -webkit-filter: blur(0);
-        filter: blur(0);
-        opacity: 1;
-    }
-
-}
-
-@keyframes flecha {
-    0% {
-        filter: drop-shadow(0px 0px 0px rgb(250, 248, 248));
-    }
-
-    50% {
-        filter: drop-shadow(0px 0px 20px rgb(250, 248, 248)) drop-shadow(0px 0px 30px rgb(215, 253, 0)) drop-shadow(0px 0px 40px rgb(251, 255, 0));
-    }
-}
-
 .segundaSeccion {
-    background-image: url(/assets/img/fonfoRo2.jpg);
+    background-image: url(/assets/img/fondo04.jpg);
     background-size: cover;
     display: flex;
     padding: 0;
+    position: relative;
+    svg{
+        height: 100%;
+        right:30rem;
+        position: absolute;
+        fill: rgba(226, 131, 7, 0.384);
+        z-index: 1;
+
+    }
+}
+
+.terceraSeccion{
+    background-image: url("/assets/img/fondo06.jpg");
+    @extend .segundaSeccion;
+    padding-left: 5em;
+}
+
+.cuartaSeccion{
+    background-image: url("/assets/img/fondo08.jpg");
+    @extend .segundaSeccion;
+}
+
+.quitaSeccion{
+    background-image: url("/assets/img/fondo09.jpg");
+    @extend .terceraSeccion;
 }
 
 .imgPersonaje {
 
     width: 50%;
     filter: drop-shadow(0px 0px 120px rgba(0, 255, 247, 0.662));
-
+    z-index: 2;
     img {
         width: 100%;
+        object-fit: cover;
 
     }
 }
 
 .infoPersonaje {
     width: 50%;
-    padding-top: 1rem;
+    padding:1rem 0.5em 0 0;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    z-index: 2;
     strong {
         font-size: 3rem;
         border-image: radial-gradient(rgb(247, 0, 173), transparent) 1;
@@ -122,12 +106,7 @@
     }
 }
 
-
-@keyframes nombrePersonaje {
-
-    50% {
-        text-shadow: 0px 0px 5px white;
-
-    }
+.efectoGroot{
+    filter: drop-shadow(0px 0px 10px rgba(246, 255, 0, 0.662));
 
 }
