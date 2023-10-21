@@ -80,7 +80,8 @@ html {
     .aside ul li {
       width: 1.8rem;
       margin-top: 2rem;
-      position: relative; }
+      position: relative;
+      border: saddlebrown solid 1px; }
       .aside ul li .textoPersonaje {
         width: 6rem;
         opacity: 0;
@@ -124,13 +125,13 @@ html {
       fill: black;
       animation: flecha 1s 4s infinite linear; }
 
-.segundaSeccion, .terceraSeccion, .quitaSeccion, .cuartaSeccion {
+.segundaSeccion, .terceraSeccion, .quitaSeccion, .cuartaSeccion, .sectaSeccion {
   background-image: url(/assets/img/fondo04.jpg);
   background-size: cover;
   display: flex;
   padding: 0;
   position: relative; }
-  .segundaSeccion svg, .terceraSeccion svg, .quitaSeccion svg, .cuartaSeccion svg {
+  .segundaSeccion svg, .terceraSeccion svg, .quitaSeccion svg, .cuartaSeccion svg, .sectaSeccion svg {
     height: 100%;
     right: 30rem;
     position: absolute;
@@ -141,11 +142,14 @@ html {
   background-image: url("/assets/img/fondo06.jpg");
   padding-left: 5em; }
 
-.cuartaSeccion {
+.cuartaSeccion, .sectaSeccion {
   background-image: url("/assets/img/fondo08.jpg"); }
 
 .quitaSeccion {
   background-image: url("/assets/img/fondo09.jpg"); }
+
+.sectaSeccion {
+  background-image: url("/assets/img/fondo10.jpg"); }
 
 .imgPersonaje {
   width: 50%;

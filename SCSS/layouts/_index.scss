@@ -70,6 +70,11 @@
     @extend .terceraSeccion;
 }
 
+.sectaSeccion{
+    background-image: url("/assets/img/fondo10.jpg");
+    @extend .cuartaSeccion;
+}
+
 .imgPersonaje {
 
     width: 50%;
